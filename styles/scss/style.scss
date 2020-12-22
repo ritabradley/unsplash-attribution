@@ -1,5 +1,9 @@
+$font: -apple-system, system-ui, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial,
+    sans-serif;
+$gray: #999;
 body {
     min-height: 100vh;
+    font-family: $font;
     background: radial-gradient(65% 100% at 50% 0%, #00ff94 0%, rgba(0, 255, 148, 0.25) 100%),
         linear-gradient(230deg, #000000 25%, #170059 100%), linear-gradient(215deg, #ffebb9 10%, #19004e 80%),
         radial-gradient(100% 245% at 100% 100%, #ffffff 0%, #000353 100%),
@@ -33,7 +37,7 @@ body {
 h3 {
     font-size: 18px;
     line-height: 28.8px;
-    margin-bottom: 2px;
+    margin: 2px auto;
 }
 
 .flex-center {
@@ -52,6 +56,65 @@ h3 {
     padding: 16px;
 }
 
-.img-wrapper {
-    background-image: url(https://source.unsplash.com/QYocXDr0KX8/240x400);
+.image-wrapper {
+    max-width: 140px;
+    background: no-repeat center/cover
+        url('https://res.cloudinary.com/ritalbradley/image/upload/v1608601737/photo-1608563543875-928ee932506e_zegcwa.jpg');
+    flex: 1;
+    border-radius: 4px;
+}
+
+.paragraph-wrapper {
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 14px;
+    flex: 1;
+}
+
+.credit-wrapper {
+    padding: 4px 6px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.credit {
+    padding: 4px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.icon-wrapper {
+    font-size: 20px;
+    margin-bottom: 10px;
+    i {
+        padding-right: 10px;
+    }
+    .fa-facebook {
+        color: #4267b2;
+    }
+    .fa-twitter {
+        color: #1da1f2;
+    }
+    .fa-pinterest {
+        color: #bd081c;
+    }
+}
+
+.fa-copy {
+    color: $gray;
+}
+
+.close-button {
+    align-self: flex-end;
+    @extend .fa-copy;
+}
+
+.link {
+    color: $gray;
 }
